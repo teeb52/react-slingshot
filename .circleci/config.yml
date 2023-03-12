@@ -7,6 +7,7 @@ jobs:
       - image: cimg/base:2023.02
     steps:
       - checkout
+      - run: apt-get install -y npm
       - run: npm i
       - save_cache:
           key: "npm-packages"
